@@ -62,7 +62,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 // Load HDRI texture
 const texture = new RGBELoader(loadingManager);
-texture.load('./static/hdri.hdr', (texture) => {
+texture.load('https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/kloppenheim_02_puresky_1k.hdr', (texture) => {
     texture.mapping = THREE.EquirectangularReflectionMapping;
     scene.environment = texture;
     hideLoader(); // Hide loader once the texture is loaded
